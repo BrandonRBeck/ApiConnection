@@ -25,8 +25,7 @@ public class CryptoCompareRunner {
 		String url = urlBuilder.build();
 		
 		ApiRequestClient requestClient = new ApiRequestClient();
-		InputStream responseStream = requestClient.establishURLConnection(url, HttpMethod.GET, null);
-		String response = ApiUtilities.convertStreamToString(responseStream);
+		String response = requestClient.establishURLConnection(url, HttpMethod.GET, null);
 		
 		System.out.println("API Response: " + response);
 		
